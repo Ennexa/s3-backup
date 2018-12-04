@@ -20,7 +20,6 @@ source:
      - /data/today
      - /data/%Y-%m-%d
 logging:
-    - 
   version: 1
   disable_existing_loggers: False
   formatters:
