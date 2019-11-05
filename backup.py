@@ -308,7 +308,15 @@ class Manager():
     
     def load_config(self, file):
         stream = open(file, "r")
-        return yaml.load(stream)
+        config = yaml.safe_load(stream)
+
+        if config.get('extends'):
+            base = self.load_config(config['extends'])
+            del config['extends']
+            base.update(config)
+            config = base
+
+        return config
     
     def load_obsolete(self):
         now = datetime.datetime.now()
