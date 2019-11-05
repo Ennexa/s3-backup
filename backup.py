@@ -158,7 +158,6 @@ class AmazonS3Store():
         if 'bucket' not in config:
             raise Exception("'bucket' is required for amazons3 store")
         
-        print(config)
         self.prefix = 's3://' + config['bucket']
         
         if 'prefix' in config:
