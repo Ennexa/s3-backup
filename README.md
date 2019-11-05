@@ -2,7 +2,11 @@
 
 Backup directories to Amazon S3 daily.
 
-#### Retention
+### Usage
+
+    ./backup.py -c config.yaml
+
+### Retention
 
 - Daily backups for a week
 - Weekly backups for a month
