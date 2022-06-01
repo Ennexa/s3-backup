@@ -295,7 +295,7 @@ class Manager():
     def init_logger(self, default_level=logging.DEBUG):
         value = os.getenv('LOG_CFG', None)
         
-        if value and os.path.exists(path):
+        if value and os.path.exists(value):
             path = value
             with open(path, 'rt') as f:
                 config = yaml.safe_load(f.read())
@@ -379,5 +379,4 @@ if __name__ == "__main__":
 #     echo $DATE
 #     delete $DATE
 # fi
-
 
